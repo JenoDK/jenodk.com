@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "about": "Over Mij",
+    "experience": "Ervaring",
+    "skills": "Vaardigheden",
+    "projects": "Projecten",
+    "strava": "Strava Statistieken",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Full-stack Developer",
+    "subtitle": "Partner • Freelancer",
+    "available": "Open voor Freelance Mogelijkheden",
+    "scrollDown": "Scroll naar beneden"
+  },
+  "about": {
+    "title": "Over Mij",
+    "summary": "Full-stack developer met 10 jaar professionele ervaring, variërend van enterprise software ontwikkeling tot partnerschap in een succesvolle en groeiende SaaS startup.",
+    "quickFacts": {
+      "title": "Snelle Feiten",
+      "yearsExperience": "10+ Jaar Ervaring",
+      "practleUsers": "2,600+ Gebruikers op Practle",
+      "freelance": "Open voor Mogelijkheden"
+    }
+  },
+  "experience": {
+    "title": "Ervaring",
+    "present": "Heden",
+    "current": "Huidig"
+  },
+  "skills": {
+    "title": "Vaardigheden",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "cloud": "Cloud",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Projecten",
+    "filter": {
+      "all": "Alles",
+      "professional": "Professioneel",
+      "personal": "Persoonlijk",
+      "opensource": "Open Source"
+    },
+    "wip": "In Ontwikkeling",
+    "viewProject": "Bekijk Project",
+    "viewCode": "Bekijk Code"
+  },
+  "strava": {
+    "title": "Strava Statistieken voor {year}",
+    "weeklyStreak": "Wekelijkse Reeks",
+    "totalKm": "Totaal km dit jaar",
+    "longestRide": "Langste Rit",
+    "longestActivity": "Langste Activiteit",
+    "maxElevationGain": "Max Hoogtemeters",
+    "sufferScore": "Max Lijden Score",
+    "earlyBird": "Vroege Vogels",
+    "coffeeRides": "Koffie Ritten",
+    "shortActivities": "Korte Activiteiten",
+    "averageSpeed": "Gemiddelde Snelheid",
+    "lastUpdated": "Laatst bijgewerkt",
+    "usingCache": "Gebruikt gecachte data",
+    "refresh": "Bijwerken",
+    "noData": "Geen data",
+    "sportTypes": {
+      "ride": "Fietsen",
+      "run": "Hardlopen",
+      "walk": "Wandelen"
+    },
+    "activities": {
+      "rides": "ritten",
+      "runs": "runs",
+      "walks": "wandelingen"
+    },
+    "heatmap": {
+      "title": "Activiteiten Heatmap voor {year}"
+    }
+  },
+  "contact": {
+    "title": "Neem Contact Op",
+    "subtitle": "Neem gerust contact op met voorstellen",
+    "email": "E-mail",
+    "github": "GitHub",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "copyright": "© {year} Jeno De Keyzer. Alle rechten voorbehouden.",
+    "builtWith": "Gebouwd met Next.js"
+  }
+}
+

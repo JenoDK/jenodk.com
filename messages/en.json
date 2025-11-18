@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "strava": "Strava Stats",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Full-stack Developer",
+    "subtitle": "Partner • Freelancer",
+    "available": "Open to Freelance Opportunities",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About Me",
+    "summary": "Full-stack developer with 10 years of professional experience, ranging from enterprise software development to partnering in a successful and growing SaaS startup.",
+    "quickFacts": {
+      "title": "Quick Facts",
+      "yearsExperience": "10+ Years Experience",
+      "practleUsers": "2,600+ Users on Practle",
+      "freelance": "Open to Opportunities"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "current": "Current"
+  },
+  "skills": {
+    "title": "Skills",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "cloud": "Cloud",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "filter": {
+      "all": "All",
+      "professional": "Professional",
+      "personal": "Personal",
+      "opensource": "Open Source"
+    },
+    "wip": "Work in Progress",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "strava": {
+    "title": "Strava Stats for {year}",
+    "weeklyStreak": "Weekly Streak",
+    "totalKm": "Total km this year",
+    "longestRide": "Longest Ride",
+    "longestActivity": "Longest Activity",
+    "maxElevationGain": "Max Elevation Gain",
+    "sufferScore": "Max Suffer Score",
+    "earlyBird": "Early Bird",
+    "coffeeRides": "Coffee Rides",
+    "shortActivities": "Short Activities",
+    "averageSpeed": "Average Speed",
+    "lastUpdated": "Last updated",
+    "usingCache": "Using cached data",
+    "refresh": "Refresh",
+    "noData": "No data",
+    "sportTypes": {
+      "ride": "Ride",
+      "run": "Run",
+      "walk": "Walk"
+    },
+    "activities": {
+      "rides": "rides",
+      "runs": "runs",
+      "walks": "walks"
+    },
+    "heatmap": {
+      "title": "Activity Heatmap for {year}"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Feel free to contact me with offers",
+    "email": "Email",
+    "github": "GitHub",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "copyright": "© {year} Jeno De Keyzer. All rights reserved.",
+    "builtWith": "Built with Next.js"
+  }
+}
+
