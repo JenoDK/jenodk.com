@@ -33,6 +33,7 @@ export async function GET(request: Request) {
   const clientId = process.env.STRAVA_CLIENT_ID;
   const clientSecret = process.env.STRAVA_CLIENT_SECRET;
   const redirectUri = process.env.STRAVA_REDIRECT_URI || `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/strava/callback`;
+  const expectedAthleteId = process.env.STRAVA_ATHLETE_ID;
 
   if (!clientId || !clientSecret) {
     return NextResponse.json(
@@ -62,6 +63,31 @@ export async function GET(request: Request) {
     }
 
     const tokens = await response.json();
+
+    // Verify the authorized athlete ID matches the expected one
+    if (expectedAthleteId) {
+      // Fetch athlete info to verify ID
+      const athleteResponse = await fetch('https://www.strava.com/api/v3/athlete', {
+        headers: {
+          Authorization: `Bearer ${tokens.access_token}`,
+        },
+      });
+
+      if (athleteResponse.ok) {
+        const athlete = await athleteResponse.json();
+        const authorizedAthleteId = athlete.id?.toString();
+        const expectedId = expectedAthleteId.toString();
+
+        if (authorizedAthleteId !== expectedId) {
+          console.error(
+            `Security violation: Attempted authorization with athlete ID ${authorizedAthleteId}, expected ${expectedId}`
+          );
+          return NextResponse.redirect(
+            `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/?strava_error=${encodeURIComponent('Unauthorized athlete ID. This authorization was rejected for security.')}`
+          );
+        }
+      }
+    }
 
     // Save tokens to file (we only need refresh_token, but save all for reference)
     await saveTokens({
