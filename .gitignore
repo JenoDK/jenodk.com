@@ -40,3 +40,4 @@ data/strava-tokens.json
 
 lib/strava.ts
 data/strava-cache.json
+CURRENT_CV.md
