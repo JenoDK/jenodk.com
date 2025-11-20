@@ -62,8 +62,11 @@ export default function Hero() {
           </div>
         </motion.div>
         <h1 className="text-5xl md:text-7xl font-bold mb-4 text-zinc-800 dark:text-zinc-100">
-          {t('title')}
+          Jeno De Keyzer
         </h1>
+        <p className="text-2xl md:text-3xl font-semibold mb-4 text-zinc-600 dark:text-zinc-400">
+          {t('title')}
+        </p>
         
         <div className="text-2xl md:text-4xl mb-6 min-h-[3rem]">
           <span className="text-zinc-600 dark:text-zinc-400">
