@@ -45,6 +45,17 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'portfolio-website',
+    title: 'Personal Portfolio Website',
+    description:
+      'Modern, bilingual (Dutch/English) portfolio website featuring dark/light mode, live Strava statistics integration, animated components, and fully responsive design. Deployed on Hetzner Cloud with Docker and automated CI/CD.',
+    type: 'personal',
+    url: 'https://jenodk.com/',
+    githubUrl: 'https://github.com/JenoDK/jenodk.com',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Docker', 'Hetzner'],
+    featured: true,
+  },
+  {
     id: 'bracket-selection',
     title: 'Bracket Selection',
     description:
