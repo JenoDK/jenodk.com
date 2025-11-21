@@ -2,34 +2,50 @@
 
 import { useEffect } from 'react';
 
+type RelType = 'icon' | 'shortcut icon' | 'apple-touch-icon';
+
 export default function FaviconHandler() {
   useEffect(() => {
+    const setIconLink = (
+      rel: RelType,
+      href: string,
+      options: { type?: string; sizes?: string } = {}
+    ) => {
+      let link = document.querySelector<HTMLLinkElement>(`link[rel='${rel}']`);
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = rel;
+        document.head.appendChild(link);
+      }
+
+      if (options.type) {
+        link.type = options.type;
+      }
+
+      if (options.sizes) {
+        link.sizes.value = options.sizes;
+      }
+
+      link.href = href;
+    };
+
     function updateFavicon() {
       const isDark = document.documentElement.classList.contains('dark');
-      const existingFavicon = document.querySelector("link[rel='icon']") as HTMLLinkElement;
-      
-      if (existingFavicon) {
-        existingFavicon.href = isDark ? '/images/logo_dark.png' : '/images/logo_light.png';
-        return;
+      const iconHref = isDark ? '/images/logo_dark.png' : '/images/logo_light.png';
+
+      setIconLink('icon', iconHref, { type: 'image/png' });
+      setIconLink('shortcut icon', iconHref, { type: 'image/png' });
+      setIconLink('apple-touch-icon', iconHref, { sizes: '180x180' });
     }
-      
-      const link = document.createElement('link');
-      link.rel = 'icon';
-      link.type = 'image/png';
-      link.href = isDark ? '/images/logo_dark.png' : '/images/logo_light.png';
-      document.head.appendChild(link);
-    }
-    
-    // Set initial favicon based on current theme (already set by blocking script)
+
     updateFavicon();
-    
-    // Watch for theme changes
+
     const observer = new MutationObserver(updateFavicon);
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['class']
     });
-    
+
     return () => observer.disconnect();
   }, []);
 
