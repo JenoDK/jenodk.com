@@ -44,6 +44,14 @@ export async function generateMetadata({
     creator: 'Jeno De Keyzer',
     publisher: 'Jeno De Keyzer',
     metadataBase: new URL(siteUrl),
+    icons: {
+      icon: [
+        { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
+      ],
+      shortcut: '/favicon.png',
+      apple: '/favicon.png',
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: alternateLanguages,
